@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Unreal_c++\\EndlessRun\\EndlessRunner\\Source\\EndlessRunner\\EndlessRunner.Build.cs",
+		"D:\\Unreal_c++\\EndlessRun\\EndlessRunner\\Source\\EndlessRunner.Target.cs",
+		"D:\\Unreal_c++\\EndlessRun\\EndlessRunner\\Source\\EndlessRunnerEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.1"
+}

@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "EndlessRunner",
+			"Path": "D:\\Unreal_c++\\EndlessRun\\EndlessRunner\\Source\\EndlessRunner.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "EndlessRunnerEditor",
+			"Path": "D:\\Unreal_c++\\EndlessRun\\EndlessRunner\\Source\\EndlessRunnerEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -2,22 +2,19 @@
   Parsing headers for EndlessRunnerEditor
     Running UnrealHeaderTool "D:\Unreal_c++\EndlessRun\EndlessRunner\EndlessRunner.uproject" "D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\EndlessRunnerEditor\Development\EndlessRunnerEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\ditde\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
   LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for EndlessRunnerEditor in 6.2998787 seconds
+  Reflection code generated for EndlessRunnerEditor in 3.1591821 seconds
   Building EndlessRunnerEditor...
   Using Visual Studio 2019 14.29.30139 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 11 actions with 16 processes...
-    [1/11] Obstacle.cpp
-    [2/11] EndlessRunner.init.gen.cpp
-    [3/11] EndlessRunnerGameModeBase.cpp
-    [4/11] Obstacle.gen.cpp
-    [5/11] FloorTile.gen.cpp
-    [6/11] FloorTile.cpp
-    [7/11] RunCharacter.cpp
-    [8/11] EndlessRunnerGameModeBase.gen.cpp
-    [9/11] UE4Editor-EndlessRunner.lib
+  Building 8 actions with 16 processes...
+    [1/8] EndlessRunner.init.gen.cpp
+    [2/8] Obstacle.cpp
+    [3/8] RunCharacter.gen.cpp
+    [4/8] FloorTile.cpp
+    [5/8] RunCharacter.cpp
+    [6/8] UE4Editor-EndlessRunner.lib
        Creating library D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Development\EndlessRunner\UE4Editor-EndlessRunner.lib and object D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Development\EndlessRunner\UE4Editor-EndlessRunner.exp
-    [10/11] UE4Editor-EndlessRunner.dll
+    [7/8] UE4Editor-EndlessRunner.dll
        Creating library D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Development\EndlessRunner\UE4Editor-EndlessRunner.suppressed.lib and object D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Development\EndlessRunner\UE4Editor-EndlessRunner.suppressed.exp
-    [11/11] EndlessRunnerEditor.target
-  Total time in Parallel executor: 7.01 seconds
-  Total execution time: 13.83 seconds
+    [8/8] EndlessRunnerEditor.target
+  Total time in Parallel executor: 2.05 seconds
+  Total execution time: 5.70 seconds

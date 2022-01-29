@@ -8,6 +8,9 @@
 #include "Components/CapsuleComponent.h"
 #include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
 #include "EndlessRunnerGameModeBase.h"
+#include "Particles/ParticleSystem.h"
+#include "Sound/SoundBase.h"
+#include "Components/SkeletalMeshComponent.h"
 
 
 // Sets default values
@@ -25,6 +28,7 @@ ARunCharacter::ARunCharacter()
 	Camera->bUsePawnControlRotation = false;
 	Camera->SetupAttachment(CameraArm, USpringArmComponent::SocketName);
 }
+
 
 // Called when the game starts or when spawned
 void ARunCharacter::BeginPlay()
@@ -90,4 +94,51 @@ void ARunCharacter::MoveRight()
 void ARunCharacter::MoveDown()
 {
 	UE_LOG(LogTemp, Warning, TEXT("MoveDown"));
+}
+
+void ARunCharacter::Death()
+{
+	
+
+	if (!bIsDead)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Bye!"));
+
+		const FVector Location = GetActorLocation();
+		UWorld* World = GetWorld();
+
+		if (World)
+		{
+			bIsDead = true;
+			DisableInput(nullptr);
+
+			if (IsValid(DeathParticleSystem) && IsValid(DeathSound))
+			{
+				UGameplayStatics::SpawnEmitterAtLocation(World, DeathParticleSystem, Location);
+
+				UGameplayStatics::PlaySoundAtLocation(World, DeathSound, Location);
+			}
+
+			GetMesh()->SetVisibility(false);
+
+			World->GetTimerManager().SetTimer(RestartTimerHandle, this, &ARunCharacter::OnDeath, 1.f, false);
+		}
+	}
+
+	
+
+	
+}
+
+void ARunCharacter::OnDeath()
+{
+	bIsDead = false;
+
+	if (RestartTimerHandle.IsValid())
+	{
+		GetWorldTimerManager().ClearTimer(RestartTimerHandle);
+		
+	}
+	UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("RestartLevel"));
+	
 }

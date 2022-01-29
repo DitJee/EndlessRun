@@ -256,6 +256,10 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_SmallObstacleClass;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BigObstacleClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_BigObstacleClass;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SceneComponent_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SceneComponent;
@@ -318,6 +322,13 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_SmallObstacleClass = { "SmallObstacleClass", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFloorTile, SmallObstacleClass), Z_Construct_UClass_AObstacle_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AFloorTile_Statics::NewProp_SmallObstacleClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_SmallObstacleClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass_MetaData[] = {
+		{ "Category", "Config" },
+		{ "ModuleRelativePath", "FloorTile.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass = { "BigObstacleClass", nullptr, (EPropertyFlags)0x0014000000000015, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFloorTile, BigObstacleClass), Z_Construct_UClass_AObstacle_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_SceneComponent_MetaData[] = {
 		{ "Category", "Components" },
@@ -389,6 +400,7 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_DestroyHandle = { "DestroyHandle", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFloorTile, DestroyHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AFloorTile_Statics::NewProp_DestroyHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_DestroyHandle_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFloorTile_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_SmallObstacleClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_SceneComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_FloorMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_AttachPoint,
@@ -426,7 +438,7 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFloorTile, 475881606);
+	IMPLEMENT_CLASS(AFloorTile, 3077333373);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<AFloorTile>()
 	{
 		return AFloorTile::StaticClass();

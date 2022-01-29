@@ -30,3 +30,8 @@ D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Inc\EndlessRunner\RunCharacter.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/KismetMathLibrary.h
+D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrary.generated.h
+D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
+D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\Obstacle.h
+D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Inc\EndlessRunner\Obstacle.generated.h

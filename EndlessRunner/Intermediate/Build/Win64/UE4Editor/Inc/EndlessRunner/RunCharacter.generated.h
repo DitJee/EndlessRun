@@ -16,18 +16,22 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define EndlessRunner_Source_EndlessRunner_RunCharacter_h_12_SPARSE_DATA
 #define EndlessRunner_Source_EndlessRunner_RunCharacter_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOnDeath); \
 	DECLARE_FUNCTION(execMoveDown); \
 	DECLARE_FUNCTION(execMoveRight); \
 	DECLARE_FUNCTION(execMoveLeft); \
+	DECLARE_FUNCTION(execDeath); \
 	DECLARE_FUNCTION(execChangeLandFinished); \
 	DECLARE_FUNCTION(execChangeLaneUpdate);
 
 
 #define EndlessRunner_Source_EndlessRunner_RunCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnDeath); \
 	DECLARE_FUNCTION(execMoveDown); \
 	DECLARE_FUNCTION(execMoveRight); \
 	DECLARE_FUNCTION(execMoveLeft); \
+	DECLARE_FUNCTION(execDeath); \
 	DECLARE_FUNCTION(execChangeLandFinished); \
 	DECLARE_FUNCTION(execChangeLaneUpdate);
 
@@ -79,7 +83,9 @@ public: \
 #define EndlessRunner_Source_EndlessRunner_RunCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraArm() { return STRUCT_OFFSET(ARunCharacter, CameraArm); } \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ARunCharacter, Camera); } \
-	FORCEINLINE static uint32 __PPO__RunGameMode() { return STRUCT_OFFSET(ARunCharacter, RunGameMode); }
+	FORCEINLINE static uint32 __PPO__RunGameMode() { return STRUCT_OFFSET(ARunCharacter, RunGameMode); } \
+	FORCEINLINE static uint32 __PPO__RestartTimerHandle() { return STRUCT_OFFSET(ARunCharacter, RestartTimerHandle); } \
+	FORCEINLINE static uint32 __PPO__bIsDead() { return STRUCT_OFFSET(ARunCharacter, bIsDead); }
 
 
 #define EndlessRunner_Source_EndlessRunner_RunCharacter_h_9_PROLOG \

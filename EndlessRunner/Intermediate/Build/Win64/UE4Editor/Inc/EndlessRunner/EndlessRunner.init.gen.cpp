@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunner_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xC2B00682,
+				0x989889A1,
 				0x7EEEE91C,
 				METADATA_PARAMS(nullptr, 0)
 			};

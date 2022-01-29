@@ -20,7 +20,17 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENDLESSRUNNER_API UClass* Z_Construct_UClass_AEndlessRunnerGameModeBase_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
+	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
+	DEFINE_FUNCTION(ARunCharacter::execOnDeath)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnDeath();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ARunCharacter::execMoveDown)
 	{
 		P_FINISH;
@@ -40,6 +50,13 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->MoveLeft();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ARunCharacter::execDeath)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Death();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ARunCharacter::execChangeLandFinished)
@@ -68,9 +85,11 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ChangeLandFinished", &ARunCharacter::execChangeLandFinished },
 			{ "ChangeLaneUpdate", &ARunCharacter::execChangeLaneUpdate },
+			{ "Death", &ARunCharacter::execDeath },
 			{ "MoveDown", &ARunCharacter::execMoveDown },
 			{ "MoveLeft", &ARunCharacter::execMoveLeft },
 			{ "MoveRight", &ARunCharacter::execMoveRight },
+			{ "OnDeath", &ARunCharacter::execOnDeath },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -153,6 +172,28 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ARunCharacter_Death_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARunCharacter_Death_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARunCharacter_Death_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARunCharacter, nullptr, "Death", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARunCharacter_Death_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARunCharacter_Death_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARunCharacter_Death()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARunCharacter_Death_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ARunCharacter_MoveDown_Statics
 	{
 #if WITH_METADATA
@@ -219,6 +260,28 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ARunCharacter_OnDeath_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARunCharacter_OnDeath_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARunCharacter_OnDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARunCharacter, nullptr, "OnDeath", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARunCharacter_OnDeath_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARunCharacter_OnDeath_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARunCharacter_OnDeath()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARunCharacter_OnDeath_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ARunCharacter_NoRegister()
 	{
 		return ARunCharacter::StaticClass();
@@ -243,6 +306,14 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RunGameMode;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeathParticleSystem_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DeathParticleSystem;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeathSound_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DeathSound;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentLane_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_CurrentLane;
@@ -250,6 +321,15 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NextLane_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_NextLane;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RestartTimerHandle_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_RestartTimerHandle;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsDead_MetaData[];
+#endif
+		static void NewProp_bIsDead_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsDead;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -262,9 +342,11 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		{ &Z_Construct_UFunction_ARunCharacter_ChangeLandFinished, "ChangeLandFinished" }, // 797528731
 		{ &Z_Construct_UFunction_ARunCharacter_ChangeLane, "ChangeLane" }, // 1074049814
 		{ &Z_Construct_UFunction_ARunCharacter_ChangeLaneUpdate, "ChangeLaneUpdate" }, // 3670349253
+		{ &Z_Construct_UFunction_ARunCharacter_Death, "Death" }, // 23587642
 		{ &Z_Construct_UFunction_ARunCharacter_MoveDown, "MoveDown" }, // 2389385540
 		{ &Z_Construct_UFunction_ARunCharacter_MoveLeft, "MoveLeft" }, // 1965295991
 		{ &Z_Construct_UFunction_ARunCharacter_MoveRight, "MoveRight" }, // 4029800975
+		{ &Z_Construct_UFunction_ARunCharacter_OnDeath, "OnDeath" }, // 1164497192
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::Class_MetaDataParams[] = {
@@ -299,6 +381,20 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_RunGameMode = { "RunGameMode", nullptr, (EPropertyFlags)0x0040000000020801, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARunCharacter, RunGameMode), Z_Construct_UClass_AEndlessRunnerGameModeBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_RunGameMode_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_RunGameMode_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathParticleSystem_MetaData[] = {
+		{ "Category", "Assets" },
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathParticleSystem = { "DeathParticleSystem", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARunCharacter, DeathParticleSystem), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathParticleSystem_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathParticleSystem_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathSound_MetaData[] = {
+		{ "Category", "Assets" },
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathSound = { "DeathSound", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARunCharacter, DeathSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathSound_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathSound_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::NewProp_CurrentLane_MetaData[] = {
 		{ "Category", "RunCharacter" },
 		{ "ModuleRelativePath", "RunCharacter.h" },
@@ -312,12 +408,32 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_NextLane = { "NextLane", nullptr, (EPropertyFlags)0x0010000000020805, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARunCharacter, NextLane), METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_NextLane_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_NextLane_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::NewProp_RestartTimerHandle_MetaData[] = {
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_RestartTimerHandle = { "RestartTimerHandle", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARunCharacter, RestartTimerHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_RestartTimerHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_RestartTimerHandle_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead_MetaData[] = {
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead_SetBit(void* Obj)
+	{
+		((ARunCharacter*)Obj)->bIsDead = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead = { "bIsDead", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ARunCharacter), &Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead_SetBit, METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARunCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_CameraArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_Camera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_RunGameMode,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathParticleSystem,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_CurrentLane,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_NextLane,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_RestartTimerHandle,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARunCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARunCharacter>::IsAbstract,
@@ -346,7 +462,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARunCharacter, 3000071137);
+	IMPLEMENT_CLASS(ARunCharacter, 254302944);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<ARunCharacter>()
 	{
 		return ARunCharacter::StaticClass();

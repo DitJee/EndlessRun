@@ -8,14 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FVector;
+struct FHitResult;
 #ifdef ENDLESSRUNNER_Obstacle_generated_h
 #error "Obstacle.generated.h already included, missing '#pragma once' in Obstacle.h"
 #endif
 #define ENDLESSRUNNER_Obstacle_generated_h
 
 #define EndlessRunner_Source_EndlessRunner_Obstacle_h_12_SPARSE_DATA
-#define EndlessRunner_Source_EndlessRunner_Obstacle_h_12_RPC_WRAPPERS
-#define EndlessRunner_Source_EndlessRunner_Obstacle_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define EndlessRunner_Source_EndlessRunner_Obstacle_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnObstacleHit);
+
+
+#define EndlessRunner_Source_EndlessRunner_Obstacle_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnObstacleHit);
+
+
 #define EndlessRunner_Source_EndlessRunner_Obstacle_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAObstacle(); \

@@ -13,14 +13,49 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 // Cross Module References
+	ENDLESSRUNNER_API UFunction* Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature();
+	UPackage* Z_Construct_UPackage__Script_EndlessRunner();
 	ENDLESSRUNNER_API UClass* Z_Construct_UClass_AEndlessRunnerGameModeBase_NoRegister();
 	ENDLESSRUNNER_API UClass* Z_Construct_UClass_AEndlessRunnerGameModeBase();
 	ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
-	UPackage* Z_Construct_UPackage__Script_EndlessRunner();
 	ENDLESSRUNNER_API UClass* Z_Construct_UClass_AFloorTile_NoRegister();
+	ENDLESSRUNNER_API UClass* Z_Construct_UClass_UGameHud_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics
+	{
+		struct _Script_EndlessRunner_eventOnCoinsCountChanged_Parms
+		{
+			int32 CoinsCount;
+		};
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_CoinsCount;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::NewProp_CoinsCount = { "CoinsCount", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(_Script_EndlessRunner_eventOnCoinsCountChanged_Parms, CoinsCount), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::NewProp_CoinsCount,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "EndlessRunnerGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_EndlessRunner, nullptr, "OnCoinsCountChanged__DelegateSignature", nullptr, nullptr, sizeof(_Script_EndlessRunner_eventOnCoinsCountChanged_Parms), Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	DEFINE_FUNCTION(AEndlessRunnerGameModeBase::execAddCoin)
 	{
 		P_FINISH;
@@ -158,6 +193,18 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnCoinsCountChanged_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnCoinsCountChanged;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameHud_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GameHud;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameHudClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_GameHudClass;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TotalCoins_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_TotalCoins;
@@ -201,6 +248,28 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_OnCoinsCountChanged_MetaData[] = {
+		{ "Category", "Delegates" },
+		{ "ModuleRelativePath", "EndlessRunnerGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_OnCoinsCountChanged = { "OnCoinsCountChanged", nullptr, (EPropertyFlags)0x0010100010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEndlessRunnerGameModeBase, OnCoinsCountChanged), Z_Construct_UDelegateFunction_EndlessRunner_OnCoinsCountChanged__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_OnCoinsCountChanged_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_OnCoinsCountChanged_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHud_MetaData[] = {
+		{ "Category", "Runtime" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "EndlessRunnerGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHud = { "GameHud", nullptr, (EPropertyFlags)0x00100000000a0809, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEndlessRunnerGameModeBase, GameHud), Z_Construct_UClass_UGameHud_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHud_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHud_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHudClass_MetaData[] = {
+		{ "Category", "Config" },
+		{ "ModuleRelativePath", "EndlessRunnerGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHudClass = { "GameHudClass", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEndlessRunnerGameModeBase, GameHudClass), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHudClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHudClass_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_TotalCoins_MetaData[] = {
 		{ "Category", "EndlessRunnerGameModeBase" },
 		{ "ModuleRelativePath", "EndlessRunnerGameModeBase.h" },
@@ -237,6 +306,9 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_LaneSwitchValues = { "LaneSwitchValues", nullptr, (EPropertyFlags)0x0010000000020801, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEndlessRunnerGameModeBase, LaneSwitchValues), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_LaneSwitchValues_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_LaneSwitchValues_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_OnCoinsCountChanged,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHud,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_GameHudClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_TotalCoins,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_FloorTileClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_NumInitialFloorTiles,
@@ -271,7 +343,7 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEndlessRunnerGameModeBase, 3344111797);
+	IMPLEMENT_CLASS(AEndlessRunnerGameModeBase, 3183043256);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<AEndlessRunnerGameModeBase>()
 	{
 		return AEndlessRunnerGameModeBase::StaticClass();

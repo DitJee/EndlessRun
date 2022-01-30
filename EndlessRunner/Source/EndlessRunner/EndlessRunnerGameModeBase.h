@@ -7,6 +7,10 @@
 #include "EndlessRunnerGameModeBase.generated.h"
 
 class AFloorTile;
+class UUserWidget;
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnCoinsCountChanged, int32, CoinsCount);
+
 /**
  * 
  */
@@ -16,6 +20,15 @@ class ENDLESSRUNNER_API AEndlessRunnerGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 public:
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Delegates")
+		FOnCoinsCountChanged OnCoinsCountChanged;
+
+	UPROPERTY(VisibleInstanceOnly, Category = "Runtime")
+		class UGameHud* GameHud;
+
+	UPROPERTY(EditAnywhere, Category = "Config")
+		TSubclassOf<UUserWidget> GameHudClass;
 
 	UPROPERTY(VisibleAnywhere)
 		int32 TotalCoins = 0;

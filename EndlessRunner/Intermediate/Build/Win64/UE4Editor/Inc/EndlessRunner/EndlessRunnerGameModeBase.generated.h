@@ -14,22 +14,35 @@ class AFloorTile;
 #endif
 #define ENDLESSRUNNER_EndlessRunnerGameModeBase_generated_h
 
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_SPARSE_DATA
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_RPC_WRAPPERS \
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_12_DELEGATE \
+struct _Script_EndlessRunner_eventOnCoinsCountChanged_Parms \
+{ \
+	int32 CoinsCount; \
+}; \
+static inline void FOnCoinsCountChanged_DelegateWrapper(const FMulticastScriptDelegate& OnCoinsCountChanged, int32 CoinsCount) \
+{ \
+	_Script_EndlessRunner_eventOnCoinsCountChanged_Parms Parms; \
+	Parms.CoinsCount=CoinsCount; \
+	OnCoinsCountChanged.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_SPARSE_DATA
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execAddCoin); \
 	DECLARE_FUNCTION(execAddFloorTile); \
 	DECLARE_FUNCTION(execCreateinitialFloorTiles);
 
 
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execAddCoin); \
 	DECLARE_FUNCTION(execAddFloorTile); \
 	DECLARE_FUNCTION(execCreateinitialFloorTiles);
 
 
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_INCLASS_NO_PURE_DECLS \
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEndlessRunnerGameModeBase(); \
 	friend struct Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics; \
@@ -38,7 +51,7 @@ public: \
 	DECLARE_SERIALIZER(AEndlessRunnerGameModeBase)
 
 
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_INCLASS \
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_INCLASS \
 private: \
 	static void StaticRegisterNativesAEndlessRunnerGameModeBase(); \
 	friend struct Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics; \
@@ -47,7 +60,7 @@ public: \
 	DECLARE_SERIALIZER(AEndlessRunnerGameModeBase)
 
 
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_STANDARD_CONSTRUCTORS \
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AEndlessRunnerGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AEndlessRunnerGameModeBase) \
@@ -60,7 +73,7 @@ private: \
 public:
 
 
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_ENHANCED_CONSTRUCTORS \
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AEndlessRunnerGameModeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -73,28 +86,28 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AEndlessRunnerGameModeBase)
 
 
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_PRIVATE_PROPERTY_OFFSET
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_13_PROLOG
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_GENERATED_BODY_LEGACY \
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_PRIVATE_PROPERTY_OFFSET
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_17_PROLOG
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_PRIVATE_PROPERTY_OFFSET \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_SPARSE_DATA \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_RPC_WRAPPERS \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_INCLASS \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_STANDARD_CONSTRUCTORS \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_PRIVATE_PROPERTY_OFFSET \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_SPARSE_DATA \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_RPC_WRAPPERS \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_INCLASS \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_GENERATED_BODY \
+#define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_PRIVATE_PROPERTY_OFFSET \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_SPARSE_DATA \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_INCLASS_NO_PURE_DECLS \
-	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_ENHANCED_CONSTRUCTORS \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_PRIVATE_PROPERTY_OFFSET \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_SPARSE_DATA \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_INCLASS_NO_PURE_DECLS \
+	EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

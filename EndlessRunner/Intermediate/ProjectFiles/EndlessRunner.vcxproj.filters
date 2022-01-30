@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\EndlessRunner.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{26E23EE8-0E18-44F3-B768-53ACC439FA0D}</UniqueIdentifier>
+      <UniqueIdentifier>{6BAB97A1-855B-4126-ABFF-62CAE9A77A90}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\EndlessRunner.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7160FA08-FF7D-4B7F-B4B3-69C5D30DE85D}</UniqueIdentifier>
+      <UniqueIdentifier>{5358F969-197C-42D3-8270-93DE8B7910E7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\EndlessRunner">
-      <UniqueIdentifier>{7060672A-2BD8-4A93-9915-E9DF742A1C46}</UniqueIdentifier>
+      <UniqueIdentifier>{DA4F273C-999F-4679-AAFC-D4AB63549CA0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\EndlessRunner\CoinItem.cpp">
       <Filter>Source\EndlessRunner</Filter>
@@ -54,6 +54,12 @@
       <Filter>Source\EndlessRunner</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\EndlessRunner\FloorTile.h">
+      <Filter>Source\EndlessRunner</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\EndlessRunner\GameHud.cpp">
+      <Filter>Source\EndlessRunner</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\EndlessRunner\GameHud.h">
       <Filter>Source\EndlessRunner</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\EndlessRunner\Obstacle.cpp">

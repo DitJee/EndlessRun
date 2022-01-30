@@ -20,17 +20,17 @@ struct FHitResult;
 #define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_SPARSE_DATA
 #define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execDestroyFloorTile); \
 	DECLARE_FUNCTION(execSpawnLaneItem); \
 	DECLARE_FUNCTION(execOnTriggerBoxOverlap); \
+	DECLARE_FUNCTION(execDestroyFloorTile); \
 	DECLARE_FUNCTION(execSpawnItems);
 
 
 #define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execDestroyFloorTile); \
 	DECLARE_FUNCTION(execSpawnLaneItem); \
 	DECLARE_FUNCTION(execOnTriggerBoxOverlap); \
+	DECLARE_FUNCTION(execDestroyFloorTile); \
 	DECLARE_FUNCTION(execSpawnItems);
 
 

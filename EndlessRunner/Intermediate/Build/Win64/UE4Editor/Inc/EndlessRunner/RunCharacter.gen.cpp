@@ -23,12 +23,20 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
+	ENGINE_API UClass* Z_Construct_UClass_APlayerStart_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ARunCharacter::execAddCoin)
 	{
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->AddCoin();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ARunCharacter::execResetLevel)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ResetLevel();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ARunCharacter::execOnDeath)
@@ -98,6 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 			{ "MoveLeft", &ARunCharacter::execMoveLeft },
 			{ "MoveRight", &ARunCharacter::execMoveRight },
 			{ "OnDeath", &ARunCharacter::execOnDeath },
+			{ "ResetLevel", &ARunCharacter::execResetLevel },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -312,6 +321,28 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ARunCharacter_ResetLevel_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARunCharacter_ResetLevel_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARunCharacter_ResetLevel_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARunCharacter, nullptr, "ResetLevel", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARunCharacter_ResetLevel_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARunCharacter_ResetLevel_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARunCharacter_ResetLevel()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARunCharacter_ResetLevel_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	UClass* Z_Construct_UClass_ARunCharacter_NoRegister()
 	{
 		return ARunCharacter::StaticClass();
@@ -364,6 +395,10 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 #endif
 		static void NewProp_bIsDead_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsDead;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerStart_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerStart;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -382,6 +417,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		{ &Z_Construct_UFunction_ARunCharacter_MoveLeft, "MoveLeft" }, // 1965295991
 		{ &Z_Construct_UFunction_ARunCharacter_MoveRight, "MoveRight" }, // 4029800975
 		{ &Z_Construct_UFunction_ARunCharacter_OnDeath, "OnDeath" }, // 1164497192
+		{ &Z_Construct_UFunction_ARunCharacter_ResetLevel, "ResetLevel" }, // 55941558
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::Class_MetaDataParams[] = {
@@ -466,6 +502,12 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		((ARunCharacter*)Obj)->bIsDead = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead = { "bIsDead", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ARunCharacter), &Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead_SetBit, METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::NewProp_PlayerStart_MetaData[] = {
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_PlayerStart = { "PlayerStart", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARunCharacter, PlayerStart), Z_Construct_UClass_APlayerStart_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_PlayerStart_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_PlayerStart_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARunCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_CameraArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_Camera,
@@ -477,6 +519,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_NextLane,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_RestartTimerHandle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_bIsDead,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_PlayerStart,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARunCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARunCharacter>::IsAbstract,
@@ -505,7 +548,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARunCharacter, 323733512);
+	IMPLEMENT_CLASS(ARunCharacter, 3892225088);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<ARunCharacter>()
 	{
 		return ARunCharacter::StaticClass();

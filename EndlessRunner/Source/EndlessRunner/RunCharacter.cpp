@@ -12,6 +12,7 @@
 #include "Sound/SoundBase.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/PlayerStart.h"
 
 
 // Sets default values
@@ -38,6 +39,10 @@ void ARunCharacter::BeginPlay()
 
 	RunGameMode = Cast<AEndlessRunnerGameModeBase>(UGameplayStatics::GetGameMode(GetWorld()));
 	check(RunGameMode);
+
+	RunGameMode->OnLevelReset.AddDynamic(this, &ARunCharacter::ResetLevel);
+
+	PlayerStart = Cast<APlayerStart>(UGameplayStatics::GetActorOfClass(GetWorld(), APlayerStart::StaticClass()));
 }
 
 // Called every frame
@@ -142,11 +147,26 @@ void ARunCharacter::OnDeath()
 		GetWorldTimerManager().ClearTimer(RestartTimerHandle);
 		
 	}
-	UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("RestartLevel"));
+
+	RunGameMode->PlayerDied();
+	//UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("RestartLevel"));
 	
 }
 
 void ARunCharacter::AddCoin()
 {
 	RunGameMode->AddCoin();
+}
+
+void ARunCharacter::ResetLevel()
+{
+	bIsDead = false;
+	EnableInput(nullptr);
+	GetMesh()->SetVisibility(true);
+
+	if (PlayerStart)
+	{
+		SetActorLocation(PlayerStart->GetActorLocation());
+		SetActorRotation(PlayerStart->GetActorRotation());
+	}
 }

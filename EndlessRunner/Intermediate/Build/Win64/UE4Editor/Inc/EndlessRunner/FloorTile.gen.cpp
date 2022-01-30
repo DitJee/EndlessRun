@@ -30,13 +30,6 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 	ENDLESSRUNNER_API UClass* Z_Construct_UClass_AEndlessRunnerGameModeBase_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
-	DEFINE_FUNCTION(AFloorTile::execDestroyFloorTile)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->DestroyFloorTile();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(AFloorTile::execSpawnLaneItem)
 	{
 		P_GET_OBJECT(UArrowComponent,Z_Param_Lane);
@@ -57,6 +50,13 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->OnTriggerBoxOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AFloorTile::execDestroyFloorTile)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DestroyFloorTile();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AFloorTile::execSpawnItems)
@@ -89,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		{ "ModuleRelativePath", "FloorTile.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFloorTile_DestroyFloorTile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFloorTile, nullptr, "DestroyFloorTile", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFloorTile_DestroyFloorTile_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFloorTile_DestroyFloorTile_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFloorTile_DestroyFloorTile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFloorTile, nullptr, "DestroyFloorTile", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFloorTile_DestroyFloorTile_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFloorTile_DestroyFloorTile_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFloorTile_DestroyFloorTile()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -257,6 +257,11 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ChildActors_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ChildActors_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ChildActors;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SmallObstacleClass_MetaData[];
 #endif
@@ -326,7 +331,7 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_EndlessRunner,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFloorTile_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AFloorTile_DestroyFloorTile, "DestroyFloorTile" }, // 1404425768
+		{ &Z_Construct_UFunction_AFloorTile_DestroyFloorTile, "DestroyFloorTile" }, // 4232693962
 		{ &Z_Construct_UFunction_AFloorTile_OnTriggerBoxOverlap, "OnTriggerBoxOverlap" }, // 1290821723
 		{ &Z_Construct_UFunction_AFloorTile_SpawnItems, "SpawnItems" }, // 837771864
 		{ &Z_Construct_UFunction_AFloorTile_SpawnLaneItem, "SpawnLaneItem" }, // 4271854047
@@ -337,6 +342,14 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		{ "ModuleRelativePath", "FloorTile.h" },
 	};
 #endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_ChildActors_Inner = { "ChildActors", nullptr, (EPropertyFlags)0x0000000000020000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_ChildActors_MetaData[] = {
+		{ "Category", "FloorTile" },
+		{ "ModuleRelativePath", "FloorTile.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_ChildActors = { "ChildActors", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFloorTile, ChildActors), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AFloorTile_Statics::NewProp_ChildActors_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_ChildActors_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::NewProp_SmallObstacleClass_MetaData[] = {
 		{ "Category", "Config" },
@@ -449,6 +462,8 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AFloorTile_Statics::NewProp_DestroyHandle = { "DestroyHandle", nullptr, (EPropertyFlags)0x0020080000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFloorTile, DestroyHandle), Z_Construct_UScriptStruct_FTimerHandle, METADATA_PARAMS(Z_Construct_UClass_AFloorTile_Statics::NewProp_DestroyHandle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFloorTile_Statics::NewProp_DestroyHandle_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFloorTile_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_ChildActors_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_ChildActors,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_SmallObstacleClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_BigObstacleClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFloorTile_Statics::NewProp_CoinItemClass,
@@ -492,7 +507,7 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFloorTile, 3088102774);
+	IMPLEMENT_CLASS(AFloorTile, 3343135818);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<AFloorTile>()
 	{
 		return AFloorTile::StaticClass();

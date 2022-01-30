@@ -8,6 +8,7 @@
 
 void AEndlessRunnerGameModeBase::BeginPlay()
 {
+	NumberOfLives = MaxLives;
 
 	UGameplayStatics::GetPlayerController(GetWorld(), 0)->bShowMouseCursor = true;
 
@@ -54,6 +55,8 @@ AFloorTile* AEndlessRunnerGameModeBase::AddFloorTile(const bool bSpawnItems)
 
 		if (Tile)
 		{
+			FloorTiles.Add(Tile);
+
 			if (bSpawnItems)
 			{
 				Tile->SpawnItems();
@@ -73,6 +76,43 @@ void AEndlessRunnerGameModeBase::AddCoin()
 
 	OnCoinsCountChanged.Broadcast(TotalCoins);
 
-
 }
 
+
+void AEndlessRunnerGameModeBase::PlayerDied()
+{
+	
+	NumberOfLives -= 1;
+	
+	OnLivesCountChanged.Broadcast(NumberOfLives);
+
+	if (NumberOfLives > 0)
+	{
+		// iterate over floortiles and call destroy floortiles
+		for (auto* Tile: FloorTiles)
+		{
+			Tile->DestroyFloorTile();
+		}
+
+		// Empty the array
+		FloorTiles.Empty();
+
+		// set the next spawn point to initial value
+		NextSpawnPoint = FTransform();
+
+		// create initial floor tiles
+		CreateinitialFloorTiles();
+
+		// Broadcast level restart
+		OnLevelReset.Broadcast();
+	}
+	else
+	{
+		// GameOver
+	}
+}
+
+void AEndlessRunnerGameModeBase::RemoveTile(AFloorTile* Tile)
+{
+	FloorTiles.Remove(Tile);
+}

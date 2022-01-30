@@ -19,6 +19,9 @@ class ENDLESSRUNNER_API AFloorTile : public AActor
 	GENERATED_BODY()
 	
 public:	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		TArray<AActor*> ChildActors;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
 		TSubclassOf<AObstacle> SmallObstacleClass;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
@@ -62,6 +65,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
 		float SpawnPercent3 = 0.5f;
 
+
+	UFUNCTION(BlueprintCallable)
+		void DestroyFloorTile();
+
 protected:
 
 	UPROPERTY(VisibleInstanceOnly)
@@ -76,8 +83,7 @@ protected:
 	UFUNCTION()
 		void SpawnLaneItem(UArrowComponent* Lane, int32& NumBigs);
 
-	UFUNCTION()
-		void DestroyFloorTile();
+	
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

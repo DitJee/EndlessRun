@@ -62,13 +62,18 @@ protected:
 		void MoveDown();
 	UFUNCTION()
 		void OnDeath();
-	
 
 	UPROPERTY()
 		FTimerHandle RestartTimerHandle;
 
 	UPROPERTY()
 		bool bIsDead = false;
+
+	UFUNCTION()
+		void ResetLevel();
+
+	UPROPERTY()
+		class APlayerStart* PlayerStart;
 
 public:	
 	// Called every frame

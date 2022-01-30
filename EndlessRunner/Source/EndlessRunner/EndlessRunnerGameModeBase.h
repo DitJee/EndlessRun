@@ -10,7 +10,8 @@ class AFloorTile;
 class UUserWidget;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnCoinsCountChanged, int32, CoinsCount);
-
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLivesCountChanged, int32, LivesCount);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLevelReset);
 /**
  * 
  */
@@ -20,6 +21,14 @@ class ENDLESSRUNNER_API AEndlessRunnerGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Delegates")
+		FOnLevelReset OnLevelReset;
+
+	UPROPERTY(VisibleInstanceOnly, Category = "RunTime")
+		TArray<AFloorTile*> FloorTiles;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Delegates")
+		FOnLivesCountChanged OnLivesCountChanged;
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Delegates")
 		FOnCoinsCountChanged OnCoinsCountChanged;
@@ -32,6 +41,12 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 		int32 TotalCoins = 0;
+
+	UPROPERTY(VisibleAnywhere)
+		int32 NumberOfLives = 0;
+
+	UPROPERTY(EditAnywhere)
+		int32 MaxLives = 3;
 
 	UPROPERTY(EditAnywhere, Category = "Config")
 		TSubclassOf<AFloorTile> FloorTileClass;
@@ -53,6 +68,12 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void AddCoin();
+
+	UFUNCTION(BlueprintCallable)
+		void PlayerDied();
+
+	UFUNCTION(BlueprintCallable)
+		void RemoveTile(AFloorTile* Tile);
 protected:
 	virtual void BeginPlay() override;
 };

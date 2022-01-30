@@ -336,6 +336,10 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RunGameMode;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MoveDownImpulse_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MoveDownImpulse;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeathParticleSystem_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DeathParticleSystem;
@@ -412,6 +416,13 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_RunGameMode = { "RunGameMode", nullptr, (EPropertyFlags)0x0040000000020801, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARunCharacter, RunGameMode), Z_Construct_UClass_AEndlessRunnerGameModeBase_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_RunGameMode_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_RunGameMode_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::NewProp_MoveDownImpulse_MetaData[] = {
+		{ "Category", "RunCharacter" },
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARunCharacter_Statics::NewProp_MoveDownImpulse = { "MoveDownImpulse", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARunCharacter, MoveDownImpulse), METADATA_PARAMS(Z_Construct_UClass_ARunCharacter_Statics::NewProp_MoveDownImpulse_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARunCharacter_Statics::NewProp_MoveDownImpulse_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathParticleSystem_MetaData[] = {
 		{ "Category", "Assets" },
 		{ "ModuleRelativePath", "RunCharacter.h" },
@@ -459,6 +470,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_CameraArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_Camera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_RunGameMode,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_MoveDownImpulse,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathParticleSystem,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_DeathSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARunCharacter_Statics::NewProp_CurrentLane,
@@ -493,7 +505,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARunCharacter, 2752454120);
+	IMPLEMENT_CLASS(ARunCharacter, 323733512);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<ARunCharacter>()
 	{
 		return ARunCharacter::StaticClass();

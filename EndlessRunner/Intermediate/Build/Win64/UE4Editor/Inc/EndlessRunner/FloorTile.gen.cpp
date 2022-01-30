@@ -40,9 +40,10 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 	DEFINE_FUNCTION(AFloorTile::execSpawnLaneItem)
 	{
 		P_GET_OBJECT(UArrowComponent,Z_Param_Lane);
+		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_NumBigs);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->SpawnLaneItem(Z_Param_Lane);
+		P_THIS->SpawnLaneItem(Z_Param_Lane,Z_Param_Out_NumBigs);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AFloorTile::execOnTriggerBoxOverlap)
@@ -206,11 +207,13 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		struct FloorTile_eventSpawnLaneItem_Parms
 		{
 			UArrowComponent* Lane;
+			int32 NumBigs;
 		};
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Lane_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Lane;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_NumBigs;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
@@ -223,15 +226,17 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::NewProp_Lane = { "Lane", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FloorTile_eventSpawnLaneItem_Parms, Lane), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::NewProp_Lane_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::NewProp_Lane_MetaData)) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::NewProp_NumBigs = { "NumBigs", nullptr, (EPropertyFlags)0x0010000000000180, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FloorTile_eventSpawnLaneItem_Parms, NumBigs), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::NewProp_Lane,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::NewProp_NumBigs,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "FloorTile.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFloorTile, nullptr, "SpawnLaneItem", nullptr, nullptr, sizeof(FloorTile_eventSpawnLaneItem_Parms), Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFloorTile, nullptr, "SpawnLaneItem", nullptr, nullptr, sizeof(FloorTile_eventSpawnLaneItem_Parms), Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AFloorTile_SpawnLaneItem_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFloorTile_SpawnLaneItem()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -324,7 +329,7 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		{ &Z_Construct_UFunction_AFloorTile_DestroyFloorTile, "DestroyFloorTile" }, // 1404425768
 		{ &Z_Construct_UFunction_AFloorTile_OnTriggerBoxOverlap, "OnTriggerBoxOverlap" }, // 1290821723
 		{ &Z_Construct_UFunction_AFloorTile_SpawnItems, "SpawnItems" }, // 837771864
-		{ &Z_Construct_UFunction_AFloorTile_SpawnLaneItem, "SpawnLaneItem" }, // 518079367
+		{ &Z_Construct_UFunction_AFloorTile_SpawnLaneItem, "SpawnLaneItem" }, // 4271854047
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFloorTile_Statics::Class_MetaDataParams[] = {
@@ -487,7 +492,7 @@ void EmptyLinkFunctionForGeneratedCodeFloorTile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFloorTile, 125108661);
+	IMPLEMENT_CLASS(AFloorTile, 3088102774);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<AFloorTile>()
 	{
 		return AFloorTile::StaticClass();

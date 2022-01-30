@@ -11,6 +11,7 @@
 #include "Particles/ParticleSystem.h"
 #include "Sound/SoundBase.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 
 // Sets default values
@@ -94,6 +95,8 @@ void ARunCharacter::MoveRight()
 void ARunCharacter::MoveDown()
 {
 	UE_LOG(LogTemp, Warning, TEXT("MoveDown"));
+	static FVector Impulse = FVector(0,0, MoveDownImpulse);
+	GetCharacterMovement()->AddImpulse(Impulse, true);
 }
 
 void ARunCharacter::Death()

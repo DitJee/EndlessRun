@@ -25,7 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunner_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xDA07FCAE,
+				0x81285166,
 				0x80E8A265,
 				METADATA_PARAMS(nullptr, 0)
 			};

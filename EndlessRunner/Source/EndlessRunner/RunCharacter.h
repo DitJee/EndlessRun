@@ -22,6 +22,9 @@ private:
 		class AEndlessRunnerGameModeBase* RunGameMode;
 
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float MoveDownImpulse = -1000.f;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Assets")
 		class UParticleSystem* DeathParticleSystem;
 

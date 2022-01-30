@@ -1,5 +1,6 @@
 D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\EndlessRunnerGameModeBase.h
-D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\FloorTile.h
+D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\Obstacle.h
 D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\RunAnimInstance.h
 D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\RunCharacter.h
-D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\Obstacle.h
+D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\FloorTile.h
+D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\CoinItem.h

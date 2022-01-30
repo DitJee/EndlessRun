@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\EndlessRunner.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B38CAF4A-21D0-4D5C-BA00-390D842DAC02}</UniqueIdentifier>
+      <UniqueIdentifier>{26E23EE8-0E18-44F3-B768-53ACC439FA0D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\EndlessRunner.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{92CB612C-A0F0-47FF-923C-59AA8AEC1812}</UniqueIdentifier>
+      <UniqueIdentifier>{7160FA08-FF7D-4B7F-B4B3-69C5D30DE85D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,8 +27,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\EndlessRunner">
-      <UniqueIdentifier>{43113D19-4961-496E-BE85-9851B86D72E9}</UniqueIdentifier>
+      <UniqueIdentifier>{7060672A-2BD8-4A93-9915-E9DF742A1C46}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\EndlessRunner\CoinItem.cpp">
+      <Filter>Source\EndlessRunner</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\EndlessRunner\CoinItem.h">
+      <Filter>Source\EndlessRunner</Filter>
+    </ClInclude>
     <None Include="..\..\Source\EndlessRunner\EndlessRunner.Build.cs">
       <Filter>Source\EndlessRunner</Filter>
     </None>

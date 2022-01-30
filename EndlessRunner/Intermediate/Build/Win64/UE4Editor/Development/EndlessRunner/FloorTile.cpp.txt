@@ -35,3 +35,5 @@ D:\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrar
 D:\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
 D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\Obstacle.h
 D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Inc\EndlessRunner\Obstacle.generated.h
+D:\Unreal_c++\EndlessRun\EndlessRunner\Source\EndlessRunner\CoinItem.h
+D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Inc\EndlessRunner\CoinItem.generated.h

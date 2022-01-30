@@ -17,12 +17,14 @@ class AFloorTile;
 #define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_SPARSE_DATA
 #define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execAddCoin); \
 	DECLARE_FUNCTION(execAddFloorTile); \
 	DECLARE_FUNCTION(execCreateinitialFloorTiles);
 
 
 #define EndlessRunner_Source_EndlessRunner_EndlessRunnerGameModeBase_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAddCoin); \
 	DECLARE_FUNCTION(execAddFloorTile); \
 	DECLARE_FUNCTION(execCreateinitialFloorTiles);
 

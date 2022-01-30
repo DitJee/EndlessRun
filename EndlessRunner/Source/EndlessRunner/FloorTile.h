@@ -11,6 +11,7 @@ class USceneComponent;
 class UStaticMeshComponent;
 class UBoxComponent;
 class AObstacle;
+class ACoinItem;
 
 UCLASS()
 class ENDLESSRUNNER_API AFloorTile : public AActor
@@ -22,6 +23,8 @@ public:
 		TSubclassOf<AObstacle> SmallObstacleClass;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
 		TSubclassOf<AObstacle> BigObstacleClass;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
+		TSubclassOf<ACoinItem> CoinItemClass;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 		USceneComponent* SceneComponent;
@@ -51,6 +54,13 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void SpawnItems();
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
+		float SpawnPercent1 = 0.1f;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
+		float SpawnPercent2 = 0.3f;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Config")
+		float SpawnPercent3 = 0.5f;
 
 protected:
 

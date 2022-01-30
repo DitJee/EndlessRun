@@ -21,6 +21,13 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 // End Cross Module References
+	DEFINE_FUNCTION(AEndlessRunnerGameModeBase::execAddCoin)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddCoin();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AEndlessRunnerGameModeBase::execAddFloorTile)
 	{
 		P_GET_UBOOL(Z_Param_bSpawnItems);
@@ -40,10 +47,33 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 	{
 		UClass* Class = AEndlessRunnerGameModeBase::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AddCoin", &AEndlessRunnerGameModeBase::execAddCoin },
 			{ "AddFloorTile", &AEndlessRunnerGameModeBase::execAddFloorTile },
 			{ "CreateinitialFloorTiles", &AEndlessRunnerGameModeBase::execCreateinitialFloorTiles },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddCoin_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddCoin_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "EndlessRunnerGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddCoin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEndlessRunnerGameModeBase, nullptr, "AddCoin", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddCoin_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddCoin_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddCoin()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddCoin_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddFloorTile_Statics
 	{
@@ -128,6 +158,10 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TotalCoins_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_TotalCoins;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FloorTileClass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_FloorTileClass;
@@ -153,6 +187,7 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_EndlessRunner,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddCoin, "AddCoin" }, // 1494090489
 		{ &Z_Construct_UFunction_AEndlessRunnerGameModeBase_AddFloorTile, "AddFloorTile" }, // 2878764507
 		{ &Z_Construct_UFunction_AEndlessRunnerGameModeBase_CreateinitialFloorTiles, "CreateinitialFloorTiles" }, // 2270079296
 	};
@@ -165,6 +200,13 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_TotalCoins_MetaData[] = {
+		{ "Category", "EndlessRunnerGameModeBase" },
+		{ "ModuleRelativePath", "EndlessRunnerGameModeBase.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_TotalCoins = { "TotalCoins", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEndlessRunnerGameModeBase, TotalCoins), METADATA_PARAMS(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_TotalCoins_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_TotalCoins_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_FloorTileClass_MetaData[] = {
 		{ "Category", "Config" },
@@ -195,6 +237,7 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_LaneSwitchValues = { "LaneSwitchValues", nullptr, (EPropertyFlags)0x0010000000020801, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AEndlessRunnerGameModeBase, LaneSwitchValues), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_LaneSwitchValues_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_LaneSwitchValues_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_TotalCoins,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_FloorTileClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_NumInitialFloorTiles,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEndlessRunnerGameModeBase_Statics::NewProp_NextSpawnPoint,
@@ -228,7 +271,7 @@ void EmptyLinkFunctionForGeneratedCodeEndlessRunnerGameModeBase() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AEndlessRunnerGameModeBase, 2668015684);
+	IMPLEMENT_CLASS(AEndlessRunnerGameModeBase, 3344111797);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<AEndlessRunnerGameModeBase>()
 	{
 		return AEndlessRunnerGameModeBase::StaticClass();

@@ -17,8 +17,8 @@ struct FHitResult;
 #endif
 #define ENDLESSRUNNER_FloorTile_generated_h
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_SPARSE_DATA
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_RPC_WRAPPERS \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_SPARSE_DATA
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execDestroyFloorTile); \
 	DECLARE_FUNCTION(execSpawnLaneItem); \
@@ -26,7 +26,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execSpawnItems);
 
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execDestroyFloorTile); \
 	DECLARE_FUNCTION(execSpawnLaneItem); \
@@ -34,7 +34,7 @@ struct FHitResult;
 	DECLARE_FUNCTION(execSpawnItems);
 
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_INCLASS_NO_PURE_DECLS \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFloorTile(); \
 	friend struct Z_Construct_UClass_AFloorTile_Statics; \
@@ -43,7 +43,7 @@ public: \
 	DECLARE_SERIALIZER(AFloorTile)
 
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_INCLASS \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_INCLASS \
 private: \
 	static void StaticRegisterNativesAFloorTile(); \
 	friend struct Z_Construct_UClass_AFloorTile_Statics; \
@@ -52,7 +52,7 @@ public: \
 	DECLARE_SERIALIZER(AFloorTile)
 
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_STANDARD_CONSTRUCTORS \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFloorTile(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFloorTile) \
@@ -65,7 +65,7 @@ private: \
 public:
 
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_ENHANCED_CONSTRUCTORS \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AFloorTile(AFloorTile&&); \
@@ -76,32 +76,32 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFloorTile)
 
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_PRIVATE_PROPERTY_OFFSET \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__RunGameMode() { return STRUCT_OFFSET(AFloorTile, RunGameMode); } \
 	FORCEINLINE static uint32 __PPO__DestroyHandle() { return STRUCT_OFFSET(AFloorTile, DestroyHandle); }
 
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_15_PROLOG
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_GENERATED_BODY_LEGACY \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_16_PROLOG
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_PRIVATE_PROPERTY_OFFSET \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_SPARSE_DATA \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_RPC_WRAPPERS \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_INCLASS \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_STANDARD_CONSTRUCTORS \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_PRIVATE_PROPERTY_OFFSET \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_SPARSE_DATA \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_RPC_WRAPPERS \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_INCLASS \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define EndlessRunner_Source_EndlessRunner_FloorTile_h_18_GENERATED_BODY \
+#define EndlessRunner_Source_EndlessRunner_FloorTile_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_PRIVATE_PROPERTY_OFFSET \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_SPARSE_DATA \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_INCLASS_NO_PURE_DECLS \
-	EndlessRunner_Source_EndlessRunner_FloorTile_h_18_ENHANCED_CONSTRUCTORS \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_PRIVATE_PROPERTY_OFFSET \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_SPARSE_DATA \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_INCLASS_NO_PURE_DECLS \
+	EndlessRunner_Source_EndlessRunner_FloorTile_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

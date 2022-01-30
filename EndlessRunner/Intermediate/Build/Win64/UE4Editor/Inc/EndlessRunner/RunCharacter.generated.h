@@ -16,6 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define EndlessRunner_Source_EndlessRunner_RunCharacter_h_12_SPARSE_DATA
 #define EndlessRunner_Source_EndlessRunner_RunCharacter_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execAddCoin); \
 	DECLARE_FUNCTION(execOnDeath); \
 	DECLARE_FUNCTION(execMoveDown); \
 	DECLARE_FUNCTION(execMoveRight); \
@@ -27,6 +28,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define EndlessRunner_Source_EndlessRunner_RunCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAddCoin); \
 	DECLARE_FUNCTION(execOnDeath); \
 	DECLARE_FUNCTION(execMoveDown); \
 	DECLARE_FUNCTION(execMoveRight); \

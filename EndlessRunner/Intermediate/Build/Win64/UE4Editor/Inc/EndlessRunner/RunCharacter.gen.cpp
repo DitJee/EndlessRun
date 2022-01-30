@@ -24,6 +24,13 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTimerHandle();
 // End Cross Module References
+	DEFINE_FUNCTION(ARunCharacter::execAddCoin)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AddCoin();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ARunCharacter::execOnDeath)
 	{
 		P_FINISH;
@@ -83,6 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 	{
 		UClass* Class = ARunCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AddCoin", &ARunCharacter::execAddCoin },
 			{ "ChangeLandFinished", &ARunCharacter::execChangeLandFinished },
 			{ "ChangeLaneUpdate", &ARunCharacter::execChangeLaneUpdate },
 			{ "Death", &ARunCharacter::execDeath },
@@ -92,6 +100,28 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 			{ "OnDeath", &ARunCharacter::execOnDeath },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ARunCharacter_AddCoin_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARunCharacter_AddCoin_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RunCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARunCharacter_AddCoin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARunCharacter, nullptr, "AddCoin", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARunCharacter_AddCoin_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARunCharacter_AddCoin_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARunCharacter_AddCoin()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARunCharacter_AddCoin_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ARunCharacter_ChangeLandFinished_Statics
 	{
@@ -339,6 +369,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_EndlessRunner,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ARunCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ARunCharacter_AddCoin, "AddCoin" }, // 2804131210
 		{ &Z_Construct_UFunction_ARunCharacter_ChangeLandFinished, "ChangeLandFinished" }, // 797528731
 		{ &Z_Construct_UFunction_ARunCharacter_ChangeLane, "ChangeLane" }, // 1074049814
 		{ &Z_Construct_UFunction_ARunCharacter_ChangeLaneUpdate, "ChangeLaneUpdate" }, // 3670349253
@@ -462,7 +493,7 @@ void EmptyLinkFunctionForGeneratedCodeRunCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARunCharacter, 254302944);
+	IMPLEMENT_CLASS(ARunCharacter, 2752454120);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<ARunCharacter>()
 	{
 		return ARunCharacter::StaticClass();

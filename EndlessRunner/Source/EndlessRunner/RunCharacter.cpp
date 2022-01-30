@@ -142,3 +142,8 @@ void ARunCharacter::OnDeath()
 	UKismetSystemLibrary::ExecuteConsoleCommand(GetWorld(), TEXT("RestartLevel"));
 	
 }
+
+void ARunCharacter::AddCoin()
+{
+	RunGameMode->AddCoin();
+}

@@ -2,19 +2,18 @@
   Parsing headers for EndlessRunnerEditor
     Running UnrealHeaderTool "D:\Unreal_c++\EndlessRun\EndlessRunner\EndlessRunner.uproject" "D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\EndlessRunnerEditor\Development\EndlessRunnerEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\ditde\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
   LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for EndlessRunnerEditor in 3.1591821 seconds
+  Reflection code generated for EndlessRunnerEditor in 7.3154627 seconds
   Building EndlessRunnerEditor...
   Using Visual Studio 2019 14.29.30139 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 8 actions with 16 processes...
-    [1/8] EndlessRunner.init.gen.cpp
-    [2/8] Obstacle.cpp
-    [3/8] RunCharacter.gen.cpp
-    [4/8] FloorTile.cpp
-    [5/8] RunCharacter.cpp
-    [6/8] UE4Editor-EndlessRunner.lib
+  Building 7 actions with 16 processes...
+    [1/7] CoinItem.cpp
+    [2/7] EndlessRunner.init.gen.cpp
+    [3/7] CoinItem.gen.cpp
+    [4/7] FloorTile.cpp
+    [5/7] UE4Editor-EndlessRunner.lib
        Creating library D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Development\EndlessRunner\UE4Editor-EndlessRunner.lib and object D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Development\EndlessRunner\UE4Editor-EndlessRunner.exp
-    [7/8] UE4Editor-EndlessRunner.dll
+    [6/7] UE4Editor-EndlessRunner.dll
        Creating library D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Development\EndlessRunner\UE4Editor-EndlessRunner.suppressed.lib and object D:\Unreal_c++\EndlessRun\EndlessRunner\Intermediate\Build\Win64\UE4Editor\Development\EndlessRunner\UE4Editor-EndlessRunner.suppressed.exp
-    [8/8] EndlessRunnerEditor.target
-  Total time in Parallel executor: 2.05 seconds
-  Total execution time: 5.70 seconds
+    [7/7] EndlessRunnerEditor.target
+  Total time in Parallel executor: 3.75 seconds
+  Total execution time: 11.57 seconds

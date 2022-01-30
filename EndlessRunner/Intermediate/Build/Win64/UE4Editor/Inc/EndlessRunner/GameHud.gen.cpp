@@ -18,7 +18,10 @@ void EmptyLinkFunctionForGeneratedCodeGameHud() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_EndlessRunner();
 	ENDLESSRUNNER_API UClass* Z_Construct_UClass_AEndlessRunnerGameModeBase_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(UGameHud::execSetCoinsCount)
 	{
@@ -36,11 +39,19 @@ void EmptyLinkFunctionForGeneratedCodeGameHud() {}
 		P_THIS->InitializeHUD(Z_Param_RunGameMode);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UGameHud::execOnPauseClick)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnPauseClick();
+		P_NATIVE_END;
+	}
 	void UGameHud::StaticRegisterNativesUGameHud()
 	{
 		UClass* Class = UGameHud::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "InitializeHUD", &UGameHud::execInitializeHUD },
+			{ "OnPauseClick", &UGameHud::execOnPauseClick },
 			{ "SetCoinsCount", &UGameHud::execSetCoinsCount },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -74,6 +85,28 @@ void EmptyLinkFunctionForGeneratedCodeGameHud() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameHud_InitializeHUD_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UGameHud_OnPauseClick_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGameHud_OnPauseClick_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GameHud.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGameHud_OnPauseClick_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGameHud, nullptr, "OnPauseClick", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGameHud_OnPauseClick_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGameHud_OnPauseClick_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UGameHud_OnPauseClick()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameHud_OnPauseClick_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -129,9 +162,17 @@ void EmptyLinkFunctionForGeneratedCodeGameHud() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PauseMenuWidgetClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_PauseMenuWidgetClass;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CoinCount_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CoinCount;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PauseBtn_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PauseBtn;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -142,6 +183,7 @@ void EmptyLinkFunctionForGeneratedCodeGameHud() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UGameHud_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UGameHud_InitializeHUD, "InitializeHUD" }, // 2113478054
+		{ &Z_Construct_UFunction_UGameHud_OnPauseClick, "OnPauseClick" }, // 3546495211
 		{ &Z_Construct_UFunction_UGameHud_SetCoinsCount, "SetCoinsCount" }, // 2193826179
 	};
 #if WITH_METADATA
@@ -152,6 +194,13 @@ void EmptyLinkFunctionForGeneratedCodeGameHud() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHud_Statics::NewProp_PauseMenuWidgetClass_MetaData[] = {
+		{ "Category", "Config" },
+		{ "ModuleRelativePath", "GameHud.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UGameHud_Statics::NewProp_PauseMenuWidgetClass = { "PauseMenuWidgetClass", nullptr, (EPropertyFlags)0x0024080000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHud, PauseMenuWidgetClass), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UGameHud_Statics::NewProp_PauseMenuWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHud_Statics::NewProp_PauseMenuWidgetClass_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHud_Statics::NewProp_CoinCount_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "GameHud" },
@@ -160,8 +209,19 @@ void EmptyLinkFunctionForGeneratedCodeGameHud() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHud_Statics::NewProp_CoinCount = { "CoinCount", nullptr, (EPropertyFlags)0x002008000008000c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHud, CoinCount), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHud_Statics::NewProp_CoinCount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHud_Statics::NewProp_CoinCount_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameHud_Statics::NewProp_PauseBtn_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "GameHud" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "GameHud.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameHud_Statics::NewProp_PauseBtn = { "PauseBtn", nullptr, (EPropertyFlags)0x002008000008000c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameHud, PauseBtn), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameHud_Statics::NewProp_PauseBtn_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameHud_Statics::NewProp_PauseBtn_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGameHud_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHud_Statics::NewProp_PauseMenuWidgetClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHud_Statics::NewProp_CoinCount,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameHud_Statics::NewProp_PauseBtn,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGameHud_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UGameHud>::IsAbstract,
@@ -190,7 +250,7 @@ void EmptyLinkFunctionForGeneratedCodeGameHud() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGameHud, 615842341);
+	IMPLEMENT_CLASS(UGameHud, 3895556066);
 	template<> ENDLESSRUNNER_API UClass* StaticClass<UGameHud>()
 	{
 		return UGameHud::StaticClass();

@@ -18,13 +18,15 @@ class AEndlessRunnerGameModeBase;
 #define EndlessRunner_Source_EndlessRunner_GameHud_h_16_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execSetCoinsCount); \
-	DECLARE_FUNCTION(execInitializeHUD);
+	DECLARE_FUNCTION(execInitializeHUD); \
+	DECLARE_FUNCTION(execOnPauseClick);
 
 
 #define EndlessRunner_Source_EndlessRunner_GameHud_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execSetCoinsCount); \
-	DECLARE_FUNCTION(execInitializeHUD);
+	DECLARE_FUNCTION(execInitializeHUD); \
+	DECLARE_FUNCTION(execOnPauseClick);
 
 
 #define EndlessRunner_Source_EndlessRunner_GameHud_h_16_INCLASS_NO_PURE_DECLS \
@@ -72,7 +74,9 @@ public: \
 
 
 #define EndlessRunner_Source_EndlessRunner_GameHud_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__CoinCount() { return STRUCT_OFFSET(UGameHud, CoinCount); }
+	FORCEINLINE static uint32 __PPO__PauseMenuWidgetClass() { return STRUCT_OFFSET(UGameHud, PauseMenuWidgetClass); } \
+	FORCEINLINE static uint32 __PPO__CoinCount() { return STRUCT_OFFSET(UGameHud, CoinCount); } \
+	FORCEINLINE static uint32 __PPO__PauseBtn() { return STRUCT_OFFSET(UGameHud, PauseBtn); }
 
 
 #define EndlessRunner_Source_EndlessRunner_GameHud_h_13_PROLOG
